@@ -1,4 +1,10 @@
 trigger:
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    appType: 'webApp'
+    WebAppName: 'amancaStrfr'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 - master
 
 pool:
